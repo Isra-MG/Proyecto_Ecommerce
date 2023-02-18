@@ -1,8 +1,10 @@
 main{    
-    section{
+    .formMod{
+        background: linear-gradient(red, purple);
         .titulo5{
             @include titulos($tipografiaS, center, 40px);
             font-style: bold;
+            color: white;
         }
         .formularioContacto{
             padding: 2rem 8rem;
@@ -36,6 +38,7 @@ main{
             }
             .inputSubmit{
                 grid-area: submit;
+                @include tamano(20%, 20%);
             }
         }
     }

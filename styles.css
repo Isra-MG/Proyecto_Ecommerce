@@ -7,11 +7,11 @@ body {
 header {
   padding: 0rem 5rem 0rem 3rem;
 }
-header nav div div a img {
+header .colorBar div div a img {
   width: 13rem;
   height: 13rem;
 }
-header nav div div .textBar {
+header .colorBar div div .textBar {
   font-family: "Montserrat", sans-serif;
   font-size: 33px;
 }
@@ -72,40 +72,115 @@ aside div .botonComprar:hover {
 }
 
 main {
-  background-color: gray;
+  /*background-color: gray;*/
 }
 main .t1 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-size: 40px;
   font-style: bold;
+  background-color: #B3061B;
+  color: #EEEEEE;
+  height: auto;
+  width: auto;
+  margin: 0;
 }
 main section .indexH1 {
   font-family: "Open Sans", sans-serif;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  background-color: gray;
+  display: flex;
+  background-color: rgb(9, 71, 37);
+  color: #EEEEEE;
+  height: auto;
+  width: auto;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  font-size: 1.4em;
+  text-align: center;
+  overflow: hidden;
 }
 main section .indexH1 p {
   padding: 3rem;
+  font-style: italic;
   text-align: justify;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+main section .indexH1 img {
+  padding: 0rem 0rem;
+  padding: 0rem 3rem;
+  width: 40%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #1C3144;
+  color: #EEEEEE;
+  margin-bottom: 0;
 }
 main .item1 .titulo2 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   text-align: center;
   font-size: 30px;
 }
-main .item1 p {
+main .item1 .funDesigner {
+  display: flex;
+  flex-basis: auto;
+  gap: 0;
+}
+main .item1 .funDesigner .imgweb {
+  padding: 0rem 0rem;
+  padding: 0rem 3rem;
+  width: 75%;
+  height: 75%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 40px;
+  background-color: #00ADB5;
+  color: #EEEEEE;
+  margin-bottom: 0;
+}
+main .item1 .funDesigner div p {
   font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  background-color: #222831;
+  color: white;
+}
+main .item1 .funDesigner div ul {
+  background-color: #222831;
+  color: #EEEEEE;
+  height: auto;
+  width: auto;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  font-size: 1.4em;
+  text-align: center;
+  padding: 40px;
+  overflow: hidden;
+}
+main .item1 .funDesigner div ul li {
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  font-size: 20px;
 }
 main section .titulo3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   font-size: 25px;
   font-style: oblique;
+  margin: 0;
+  background-color: rgb(180, 180, 180);
 }
 main section .ytb {
+  background: linear-gradient(black, white);
   padding: 2rem 5rem;
   display: grid;
   align-content: center;
@@ -115,8 +190,12 @@ main section .ytb .titulo4 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   text-align: center;
   font-size: 20px;
+  color: white;
 }
 
+main section {
+  background-color: sandybrown;
+}
 main section .subs {
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -132,7 +211,6 @@ main section #contenedorProductos .flip-card {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px;
 }
 main section #contenedorProductos .flip-card:hover .flip-card-inner {
@@ -184,41 +262,112 @@ main section #contenedorProductos .flip-card .flip-card-inner .flip-card-back bu
   font-size: 20px;
 }
 
-main section .titulo5 {
+main .formMod {
+  background: linear-gradient(red, purple);
+}
+main .formMod .titulo5 {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 40px;
   font-style: bold;
+  color: white;
 }
-main section .formularioContacto {
+main .formMod .formularioContacto {
   padding: 2rem 8rem;
   gap: 30px;
   display: grid;
   grid-template-areas: "nombre apellido edad" "mail telefono direccion" "contacto contacto submit";
 }
-main section .formularioContacto .inputNombre {
+main .formMod .formularioContacto .inputNombre {
   grid-area: nombre;
 }
-main section .formularioContacto .inputApellido {
+main .formMod .formularioContacto .inputApellido {
   grid-area: apellido;
 }
-main section .formularioContacto .inputEdad {
+main .formMod .formularioContacto .inputEdad {
   grid-area: edad;
 }
-main section .formularioContacto .inputMail {
+main .formMod .formularioContacto .inputMail {
   grid-area: mail;
 }
-main section .formularioContacto .inputPhone {
+main .formMod .formularioContacto .inputPhone {
   grid-area: telefono;
 }
-main section .formularioContacto .inputDir {
+main .formMod .formularioContacto .inputDir {
   grid-area: direccion;
 }
-main section .formularioContacto .textArea {
+main .formMod .formularioContacto .textArea {
   grid-area: contacto;
 }
-main section .formularioContacto .inputSubmit {
+main .formMod .formularioContacto .inputSubmit {
   grid-area: submit;
+  width: 20%;
+  height: 20%;
+}
+
+main .quien {
+  font-size: 25px;
+  background-color: white;
+}
+main .quien h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  background-color: #1C3144;
+  color: white;
+}
+main .quien div {
+  display: flex;
+}
+main .quien div h3 {
+  padding: 5rem 8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: justify;
+}
+main .quien div img {
+  padding: 1rem 5rem 2rem;
+}
+main .quien_tabla {
+  background-color: white;
+}
+main .quien_tabla .titu {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  background-color: #1C3144;
+  color: white;
+}
+main .quien_tabla table {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-style: italic;
+  height: 8rem;
+}
+main .port {
+  background-color: rgba(128, 128, 128, 0.779);
+}
+main .port h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  background-color: #1C3144;
+  color: white;
+}
+main .port div {
+  justify-content: center;
+  align-items: center;
+}
+main .port div .carr1 {
+  padding: 2rem 8rem;
+}
+main .where {
+  background-color: rgb(171, 171, 232);
+}
+main .where h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  background-color: #1C3144;
+  color: white;
 }
 
 footer {
@@ -239,16 +388,65 @@ footer div .contenedorRedes {
 }
 footer div .contenedorRedes a {
   color: black;
-  font-size: 35px;
+  font-size: 24px;
 }
 
 @media only screen and (max-width: 600px) {
-  header {
-    padding: 1rem;
+  main .t1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: #EEEEEE;
   }
-  header nav div div a img {
+  main section .indexH1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 16px;
+    padding-bottom: 2rem;
+  }
+  main section .indexH1 p {
+    padding: 1rem;
+    text-align: justify;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+  main section .indexH1 img {
+    width: 100%;
+    height: 100%;
+  }
+  main .item1 .titulo2 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    text-align: center;
+    font-size: 24px;
+  }
+  main .item1 .funDesigner {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  main .item1 .funDesigner .imgweb {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+  }
+  main .item1 .funDesigner div p {
+    font-size: 18px;
+  }
+  main .item1 .funDesigner div ul {
+    padding: 22px;
+  }
+  main .item1 .funDesigner div ul li {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0rem 2rem 0rem 2rem;
+  }
+  header .colorBar div div a img {
     width: 8rem;
     height: 8rem;
+  }
+  header .colorBar div div .textBar {
+    font-size: 18px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -286,6 +484,75 @@ footer div .contenedorRedes a {
     background-color: #1C3144;
     color: white;
     font-size: 8px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main .quien {
+    font-size: 18px;
+    background-color: white;
+  }
+  main .quien div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  main .quien div h3 {
+    padding: 1rem 1rem;
+    font-size: 20px;
+  }
+  main .quien div img {
+    width: 100%;
+    height: 100%;
+  }
+  main .port div .carr1 {
+    padding: 1rem 3rem;
+    width: 120%;
+    height: 120%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main .formMod .titulo5 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 24px;
+  }
+  main .formMod .formularioContacto {
+    padding: 1rem 2rem;
+    gap: 2px;
+    display: grid;
+    grid-template-areas: "nombre apellido" "edad mail" "telefono direccion" "contacto contacto" "submit submit";
+  }
+  main .formMod .formularioContacto .inputNombre {
+    width: 80%;
+    height: 80%;
+  }
+  main .formMod .formularioContacto .inputApellido {
+    width: 80%;
+    height: 80%;
+  }
+  main .formMod .formularioContacto .inputEdad {
+    width: 80%;
+    height: 80%;
+  }
+  main .formMod .formularioContacto .inputMail {
+    width: 80%;
+    height: 80%;
+  }
+  main .formMod .formularioContacto .inputPhone {
+    width: 80%;
+    height: 80%;
+  }
+  main .formMod .formularioContacto .inputDir {
+    width: 80%;
+    height: 80%;
+  }
+  main .formMod .formularioContacto .textArea {
+    width: 80%;
+    height: 80%;
+  }
+  main .formMod .formularioContacto .inputSubmit {
+    font-size: 15px;
+    width: 80%;
+    height: 80%;
   }
 }
 

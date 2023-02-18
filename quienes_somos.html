@@ -14,7 +14,7 @@
 
 <body>
     <header class="d-flex justify-content-between">
-        <nav class="navbar navbar-expand-lg bg-light w-100">
+        <nav class="navbar navbar-expand-lg w-100 colorBar">
             <div class="container-fluid">
                 <div>
                     <a href="./index.html">
@@ -26,66 +26,107 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNav">
-                    <div class="navbar-nav w-100 justify-content-around">
+                    <div class="navbar-nav w-100 justify-content-around textBar">
                         <a class="nav-link" href="./quienes_somos.html">¿Quienes Somos?</a>
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                        <a class="nav-link" href="#seccionProductos">Productos</a>
+                        <a class="nav-link" href="#seccionFormulario">Contactanos</a>
                     </div>
                 </div>
 
             </div>
         </nav>
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight">
-            <iconify-icon icon="material-symbols:shopping-cart"></iconify-icon>
-        </button>
+        <div class="d-flex align-items-center" id="contenedorContadorCarrito">
+            <button class="btn botonCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <iconify-icon icon="material-symbols:shopping-cart"></iconify-icon>
+            </button>
+        </div>
     </header>
     <main>
-        <section>
+        <section class="quien">
             <h2>Formación Profesional</h2>
-            <h3>
-                Licenciatura en Ing. en Sistemas Automotrices del 2015 al 2022 por la
-                Benemérita Universidad Autónoma de Puebla
-            </h3>
-            <img src="/imagenes/buap.jpg" alt="BUAP" />
+            <div>
+                <h3>
+                    Licenciatura en Ing. en Sistemas Automotrices del 2015 al 2022 por la
+                    Benemérita Universidad Autónoma de Puebla
+                </h3>
+                <img src="/imagenes/buap.jpg" alt="BUAP" />
+            </div>
+
+
         </section>
 
-        <section>
-            <h2>Certificaciones</h2>
+        <section class="quien_tabla">
+            <h2 class="titu">Certificaciones</h2>
             <!-----Tabla----->
-            <table>
-                <tr>
-                    <td>Certificado</td>
-                    <td>Año</td>
-                    <td>Institución</td>
-                </tr>
-                <tr>
-                    <td>Ingles B1</td>
-                    <td>2011</td>
-                    <td>Cambridge University</td>
-                </tr>
-                <tr>
-                    <td>Introducción a las Tecnologías Emergentes</td>
-                    <td>2022</td>
-                    <td>Secretaria de Economía del Estado de Puebla</td>
-                </tr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Certificado</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Institución</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ingles B1</td>
+                        <td>2011</td>
+                        <td>Cambridge University</td>
+                    </tr>
+                    <tr>
+                        <td>Introducción a las Tecnologías Emergentes</td>
+                        <td>2022</td>
+                        <td>Secretaria de Economía del Estado de Puebla</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
-        <section>
+        <section class="port">
             <h2>Portafolio</h2>
-            <div class="grid_prueba">
-                <div><img src="./imagenes/galeria1.jpg" alt="imagen1"></div>
-                <div><img src="./imagenes/galeria2.jpg" alt="imagen2"></div>
-                <div><img src="./imagenes/galeria3.jpg" alt="imagen3"></div>
-                <div><img src="./imagenes/galeria4.jpg" alt="imagen4"></div>
-                <div><img src="./imagenes/galeria5.jpg" alt="imagen5"></div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner carr1">
+                    <div class="carousel-item active">
+                        <a href="https://github.com/Isra-MG" target="_blank">
+                            <img src="./imagenes/galeria1.jpg" class="d-block w-75" hre alt="imagen 1">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://github.com/Isra-MG" target="_blank">
+                            <img src="./imagenes/galeria2.jpg" class="d-block w-75" alt="imagen 2">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://github.com/Isra-MG" target="_blank">
+                            <img src="./imagenes/galeria3.jpg" class="d-block w-75" alt="imagen 3">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://github.com/Isra-MG" target="_blank">
+                            <img src="./imagenes/galeria6.jpg" class="d-block w-75" alt="imagen 4">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
-        <section>
+        <section class="where">
             <h2>Donde nos encontramos</h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241387.53654186014!2d-98.29726489892305!3d19.03380605284718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0916b41d721%3A0x855938e40c92cbcd!2sPuebla%2C%20Pue.!5e0!3m2!1ses!2smx!4v1668907623652!5m2!1ses!2smx"
-                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241387.53654186014!2d-98.29726489892305!3d19.03380605284718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0916b41d721%3A0x855938e40c92cbcd!2sPuebla%2C%20Pue.!5e0!3m2!1ses!2smx!4v1668907623652!5m2!1ses!2smx"
+                    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </section>
 
 

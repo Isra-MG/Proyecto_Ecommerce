@@ -1,0 +1,60 @@
+main{
+    .quien{
+        font-size: 25px;
+        background-color: white;
+        h2{
+            @include titulos($tipografiaLucida, center, 30px);
+            background-color: $colorPrincipal;
+            color: white;
+        }
+        div{
+            display: flex;
+            h3{
+            padding: 5rem 8rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: justify;
+            }
+            img{
+                padding: 1rem 5rem 2rem;
+            }
+        }
+        
+    }
+    .quien_tabla{
+        background-color: white;
+        .titu{
+            @include titulos($tipografiaLucida, center, 30px);
+            background-color: $colorPrincipal;
+            color: white;
+        }
+        
+        table{
+            font-family: $tipografiaLucida;
+            font-style: italic;
+            height: 8rem;
+        }
+    }
+    .port{
+        background-color: rgba(128, 128, 128, 0.779);
+        h2{ 
+            @include titulos($tipografiaLucida, center, 30px);
+            background-color: $colorPrincipal;
+            color: white;
+        }
+        div{
+            justify-content: center;
+            align-items: center;
+            .carr1{
+                padding: 2rem 8rem;
+            }
+        }
+    }
+    .where{
+        background-color: rgb(171, 171, 232);
+        h2{            
+            @include titulos($tipografiaLucida, center, 30px);
+            background-color: $colorPrincipal;
+            color: white;
+        }
+    }
+}

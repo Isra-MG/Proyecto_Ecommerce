@@ -1,0 +1,50 @@
+@media only screen and (max-width: 600px) {
+    main{
+        .t1{
+            @include titulos($tipografiaP, center, 24px);
+            color: #EEEEEE;
+        }
+        section{
+            .indexH1{
+                display: grid;
+                grid-template-columns: 1fr;
+                font-size: 16px;
+                padding-bottom: 2rem;
+                p{
+                    padding: 1rem;
+                    text-align: justify;
+                    font-family: $tipografiaLucida;
+                }
+                img{
+                    @include tamano(100%, 100%);
+                }
+            }
+        }
+        .item1{
+            .titulo2{
+                @include titulos($tipografiaLucida, center, 24px);
+            }
+            
+            .funDesigner{
+                display: grid;
+                grid-template-columns: 1fr;
+                .imgweb{
+                    @include tamano(100%, 100%);
+                    padding: 12px;
+                }
+                div{
+                    p{
+                        font-size: 18px;   
+                    }
+                    ul{
+                        padding: 22px;
+                        li{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

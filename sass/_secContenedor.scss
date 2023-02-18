@@ -1,5 +1,6 @@
 main{
     section{
+        background-color: sandybrown;
         .subs{
             font-family: $tipografiaP;            
             text-align: center;
@@ -13,7 +14,6 @@ main{
                 .flip-card {
                     background-color: transparent;
                     @include tamano (300px, 200px);
-                    border: 1px solid #f1f1f1;
                     perspective: 1000px; 
                     &:hover .flip-card-inner {
                         transform: rotateY(180deg);

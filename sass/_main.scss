@@ -1,19 +1,47 @@
 main{
-    background-color: gray;
+    /*background-color: gray;*/
     .t1{
         @include titulos($tipografiaP, center, 40px);
         font-style: bold;
+        background-color: $colorSecundario;
+        color: #EEEEEE;
+        height: auto;
+        width: auto;
+        margin: 0;
+
     }
     section{
         .indexH1{
             font-family: $tipografiaS;
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            background-color: gray;
+            display: flex;
+            background-color: rgb(9, 71, 37);
+            color: #EEEEEE;
+            height: auto;
+            width: auto;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: auto;
+            font-size: 1.4em;
+            text-align: center;
+            overflow: hidden;
             p{
                 padding: 3rem;
+                font-style: italic;
                 text-align: justify;
                 font-family: $tipografiaLucida;
+            }
+            img{
+                padding: 0rem 0rem;
+                padding: 0rem 3rem;
+                @include tamano(40%, 40%);
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                background-color: $colorPrincipal;
+                color: #EEEEEE;
+                margin-bottom: 0;
             }
         }
     }
@@ -21,22 +49,73 @@ main{
         .titulo2{
             @include titulos($tipografiaLucida, center, 30px);
         }
-        p{
-            font-family: $tipografiaP;
+        
+        .funDesigner{
+            display: flex;
+            flex-basis: auto;
+            gap: 0;
+            .imgweb{
+                padding: 0rem 0rem;
+                padding: 0rem 3rem;
+                @include tamano(75%, 75%);
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                width: auto;
+                padding: 40px;
+                background-color: #00ADB5;
+                color: #EEEEEE;
+                margin-bottom: 0;
+            }
+            div{
+                p{
+                    font-family: $tipografiaP;
+                    text-align: center;
+                    font-size: 24px;     
+                    margin: 0;
+                    background-color: #222831; 
+                    color: white;     
+                }
+                ul{
+                    background-color: #222831;             
+                    color: #EEEEEE;
+                    height: auto;
+                    width: auto;
+                    margin: 0;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    width: auto;
+                    font-size: 1.4em;
+                    text-align: center;
+                    padding: 40px;
+                    overflow: hidden;
+                    li{
+                        font-family: $tipografiaP;
+                        text-align: justify;
+                        font-size: 20px;
+                    }
+                }
+            }
+            
         }
     }
     section{
         .titulo3{            
             @include titulos($tipografiaVerdana, center, 25px);
-            font-style: oblique;            
+            font-style: oblique;
+            margin: 0;
+            background-color: rgb(180, 180, 180);
         }
         .ytb{
+            background:linear-gradient(black,white);
             padding: 2rem 5rem;
             display: grid;            
             align-content: center;
             grid-template-columns: 1fr 1fr 1fr;
             .titulo4{
                 @include titulos($tipografiaLucida, center, 20px);
+                color: white;
             }
         }
     }   

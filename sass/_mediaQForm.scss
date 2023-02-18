@@ -1,0 +1,48 @@
+@media only screen and (max-width: 600px) {
+    main{
+        .formMod{
+            .titulo5{
+                @include titulos($tipografiaS, center, 24px);;
+            }
+            .formularioContacto{
+                padding: 1rem 2rem;
+                gap: 2px;
+    
+                display: grid;
+                grid-template-areas: 
+                    "nombre apellido" 
+                    "edad mail"
+                    "telefono direccion"
+                    "contacto contacto" 
+                    "submit submit";
+
+                .inputNombre{
+                    @include tamano(80%, 80%);
+                }
+                .inputApellido{
+                    @include tamano(80%, 80%);
+                }
+                .inputEdad{
+                    @include tamano(80%, 80%);
+                }
+                .inputMail{
+                    @include tamano(80%, 80%);
+                }
+                .inputPhone{
+                    @include tamano(80%, 80%);
+                }
+                .inputDir{
+                    @include tamano(80%, 80%);
+                }
+                .textArea{
+                    @include tamano(80%, 80%);
+                }
+                .inputSubmit{
+                    font-size: 15px;
+                    @include tamano(80%, 80%);
+                }    
+            }
+
+        }
+    }
+}
