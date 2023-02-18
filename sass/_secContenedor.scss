@@ -1,0 +1,65 @@
+main{
+    section{
+        .subs{
+            font-family: $tipografiaP;            
+            text-align: center;
+        }
+        #contenedorProductos{
+            padding: 2rem 5rem;
+            display: grid;
+            align-content: center;
+            gap: 2rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+                .flip-card {
+                    background-color: transparent;
+                    @include tamano (300px, 200px);
+                    border: 1px solid #f1f1f1;
+                    perspective: 1000px; 
+                    &:hover .flip-card-inner {
+                        transform: rotateY(180deg);
+                    }
+                    .flip-card-inner {
+                        position: relative;
+                        @include tamano (100%, 100%);
+                        text-align: center;
+                        transition: transform 0.8s;
+                        transform-style: preserve-3d;
+                        .flip-card-front, .flip-card-back {
+                            position: absolute;
+                            @include tamano (100%, 100%);
+                            -webkit-backface-visibility: hidden; /* Safari */
+                            backface-visibility: hidden;
+                        }
+                        .flip-card-front {
+                            background-color: transparent;
+                            color: black;
+                            img{
+                                @include tamano (300px, 180px);
+                            }
+                        }
+                        .flip-card-back {
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            background-color: $colorSecundario;
+                            color: white;
+                            transform: rotateY(180deg);
+                            padding: 2rem;
+                            .tituloCard{
+                                @include titulos($tipografiaS, center, 25px)
+                            }
+                            p{
+                                @extend .tituloCard;
+                                font-style: italic;
+                            }
+                            button{
+                                border-radius: 2rem;
+                                border-color: transparent;
+                                background-color: $colorPrincipal;
+                                color: white;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}

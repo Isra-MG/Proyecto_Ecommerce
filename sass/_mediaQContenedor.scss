@@ -1,0 +1,44 @@
+@media only screen and (max-width: 600px){
+    main{
+        section{
+            .ytb{
+                padding: 1rem 2rem;
+                grid-template-columns: 1fr;
+
+            }
+        }
+        section{
+            #contenedorProductos{
+                grid-template-columns: 1fr 1fr;            
+                gap: 15px;
+                padding: 1rem;
+                .flip-card{
+                    @include tamano (120px, 160px);
+                    .flip-card-inner{
+                        .flip-card-front {
+                            img{
+                                @include tamano (100%, 50%);
+                            }                        
+                        }
+                        .flip-card-back {
+                            padding: 1rem;
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            background-color: $colorSecundario;
+                            color: white;
+                            .tituloCard{
+                                @include titulos($tipografiaS, center, 75%)
+                            }
+                            button{
+                                    border-radius: 2rem;
+                                    border-color: transparent;
+                                    background-color: $colorPrincipal;
+                                    color: white; 
+                                    font-size: 8px;                                  
+                                }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}

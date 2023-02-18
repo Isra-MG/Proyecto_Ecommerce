@@ -1,0 +1,42 @@
+main{
+    h1{
+        @include titulos($tipografiaP, center, 40px);
+    }
+    section{
+        .indexH1{
+            font-family: $tipografiaS;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            background-color: gray;
+            p{
+                padding: 3rem;
+                text-align: justify;
+                font-family: $tipografiaLucida;
+            }
+        }
+    }
+    .item1{
+        .titulo2{
+            @include titulos($tipografiaLucida, center, 30px);
+        }
+        p{
+            font-family: $tipografiaP;
+        }
+    }
+    section{
+        .titulo3{            
+            @include titulos($tipografiaVerdana, center, 25px);
+            font-style: oblique;            
+        }
+        .ytb{
+            padding: 2rem 5rem;
+            display: grid;            
+            align-content: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            .titulo4{
+                @include titulos($tipografiaLucida, center, 20px);
+            }
+        }
+    }
+       
+}

@@ -1,0 +1,42 @@
+main{    
+    section{
+        .titulo5{
+            @include titulos($tipografiaS, center, 40px);
+            font-style: bold;
+        }
+        .formularioContacto{
+            padding: 2rem;
+            gap: 30px;
+
+            display: grid;
+            grid-template-areas: 
+                "nombre apellido edad"
+                "mail telefono direccion"
+                "contacto contacto submit";
+            .inputNombre{
+                grid-area: nombre;
+            }
+            .inputApellido{
+                grid-area: apellido;
+            }
+            .inputEdad{
+                grid-area: edad;
+            }
+            .inputMail{
+                grid-area: mail;
+            }
+            .inputPhone{
+                grid-area: telefono;
+            }
+            .inputDir{
+                grid-area: direccion;
+            }
+            .textArea{
+                grid-area: contacto;
+            }
+            .inputSubmit{
+                grid-area: submit;
+            }
+        }
+    }
+}
