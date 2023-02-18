@@ -1,4 +1,38 @@
 header{
-    padding: 2.5rem 3rem;
-    
+    padding: 0rem 5rem 0rem 3rem;
+    nav {
+        div{
+            div{
+                a{
+                    img {
+                        @include tamano (13rem, 13rem)
+                    }
+                }
+            }
+            div{
+                .textBar{
+                    font-family: $tipografiaP;
+                    font-size: 33px;
+                }
+            }
+        }
+    }
+    div {
+        gap: 3px;
+        .botonCarrito {
+            font-size: 23px;
+            padding-right: 0;
+        }
+        .contadorCarrito {
+            color: white;
+            margin: 0;
+            background-color: $colorPrincipal;
+            height: 24px;
+            width: 24px;
+            border-radius: 100%;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
 }

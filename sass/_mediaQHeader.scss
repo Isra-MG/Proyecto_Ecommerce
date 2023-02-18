@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 1rem;
+        nav {
+            div{
+                div{
+                    a{
+                        img {
+                            @include tamano (8rem, 8rem)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

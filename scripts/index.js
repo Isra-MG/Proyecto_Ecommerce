@@ -1,8 +1,11 @@
-const contenedorProductos = document.getElementById("contenedorProductos")
+const contenedorProductos = document.getElementById("contenedorProductos");
+const contadorCarrito = document.getElementById ("contadorCarrito"); 
 const contenedorContadorCarrito = document.getElementById("contenedorContadorCarrito");
+const carritoOffcanvas = document.getElementById("carritoOffcanvas");
+const precioTotalCarrito = document.getElementById ("precioTotalCarrito");
+const terminarCompra = document.getElementById ("terminarCompra");
 const contador = document.createElement("p");
 
-const carritodeCompras = [];
 
 const paquetes = [
     { id: 1, nombre: "Paquete 1", imagen: "../imagenes/e-commerce.jpg", precio: 6000, cantidad: 1},
@@ -14,6 +17,8 @@ const paquetes = [
     { id: 7, nombre: "Paquete 7", imagen: "../imagenes/galeria5.jpg", precio: 2500, cantidad: 1},
     { id: 8, nombre: "Paquete 8", imagen: "../imagenes/galeria5.jpg", precio: 3000, cantidad: 1},    
 ]
+
+const carritodeCompras = [];
 
 paquetes.forEach((item) => {
     const div = document.createElement("div")
@@ -34,35 +39,85 @@ paquetes.forEach((item) => {
     `
     contenedorProductos.appendChild(div)
     const botonAdd = document.getElementById(`Paquete ${item.id}`);
-    botonAdd.addEventListener("click",()=> {agregarAlCarrito(item.id,carritodeCompras)})
+    botonAdd.addEventListener("click",()=> {
+        agregarAlCarrito(item.id,carritodeCompras);
+        agregarContadorCarrito();
+        mostrarCarrito();
+    })
 })
 
-const agregarAlCarrito = (productoSeleccionado, carrito) => {
-    const productoElegido = paquetes.find(paquetes => paquetes.id === productoSeleccionado);
-    carrito.push (productoElegido);
-
-}
-
-const agregarcontadorCarrito = ()=> {
-    if(carritodeCompras.length !==0){
-        contador.textContent = carritodeCompras.length;
-        contador.classList.add("contadorCarrito");
-        contenedorContadorCarrito.appendChild(contador);
+const agregarAlCarrito = (productoSeleccionado, carrito)=> {
+    const productoExiste = carritodeCompras.some (paquetes => paquetes.id === productoSeleccionado);
+    const productoElegido = paquetes.find (paquetes => paquetes.id === productoSeleccionado);
+    if (productoExiste) {
+        let precioInicial = productoElegido.precio;
+        productoElegido.cantidad++;
+        productoElegido.nuevoPrecio = productoElegido.cantidad * precioInicial;
+    } else {
+        carrito.push (productoElegido);
+        console.log ("Agregado con exito");
+        console.log (carrito);
     }
 }
 
-const mostrarCarrito = () => {
-    carritoOffCanvas.innerHTML ="";
-    carritodeCompras.forEach(producto => )
+const agregarContadorCarrito = ()=> {
+    if (carritodeCompras.length !== 0) {
+        contenedorContadorCarrito.appendChild(contador);
+        contador.textContent = carritodeCompras.length;
+        contador.classList.add("contadorCarrito");
+    } else {
+        contador.textContent ="";
+        contador.classList.remove ("contadorCarrito");
+    }
 }
+
+const mostrarCarrito = ()=>{
+    carritoOffcanvas.innerHTML="";
+    carritodeCompras.forEach (producto => {
+        tr = document.createElement ("tr");
+        tr.classList.add("tablaProductos");
+        tr.innerHTML += 
+        `
+            <td>
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+            </td>
+            <td class="infoProducto">${producto.nombre}</td>
+            <td class="infoProducto">${producto.cantidad}</td>
+            <td class="infoProducto">${producto.precio}</td>
+            <td class="infoProducto eliminarProducto">
+                <iconify-icon icon="material-symbols:delete-outline" class="deleteIconify" id="eliminar${producto.id}"></iconify-icon>
+            </td>
+        `
+
+        carritoOffcanvas.appendChild(tr)
+
+        const botonEliminar = document.getElementById(`eliminar${producto.id}`);
+        botonEliminar.addEventListener("click", ()=> {
+            eliminarProducto(producto.id)
+        })
+    })
+    const totalCarrito = carritodeCompras.reduce ((acumulador,producto) => acumulador + producto.precio,0);
+    precioTotalCarrito.innerText =`Precio total: $${totalCarrito}`;
+}
+
 
 
 const eliminarProducto = (productoClickeado) => {
-    const productoEliminado = carritodeCompras.find(paquetes => paquetes.id ===productoClickeado)
+    const productoEliminado = carritodeCompras.find(paquetes => paquetes.id ===productoClickeado);
     const index = carritodeCompras.indexOf(productoEliminado);
-    carritodeCompras.splice(index,1);
-    agregarcontadorCarrito();
+    carritodeCompras.splice (index,1);
+    agregarContadorCarrito();
     mostrarCarrito();
 }
 
-const 
+const vaciarCarrito = ()=> {
+    carritoDeCompras.innerHTML =[];
+    carritoOffcanvas.innerHTML =[];
+    contador.textContent ="";
+    contador.classList.remove ("contadorCarrito");
+}
+
+terminarCompra.addEventListener ("click", ()=> {
+    vaciarCarrito();
+})
+

@@ -1,6 +1,8 @@
 main{
-    h1{
+    background-color: gray;
+    .t1{
         @include titulos($tipografiaP, center, 40px);
+        font-style: bold;
     }
     section{
         .indexH1{
@@ -37,6 +39,5 @@ main{
                 @include titulos($tipografiaLucida, center, 20px);
             }
         }
-    }
-       
+    }   
 }

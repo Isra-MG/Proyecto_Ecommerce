@@ -1,0 +1,18 @@
+footer {
+    padding: 2rem 2rem;
+    div {
+        justify-content: center;
+        .tituloFooter {
+            @include titulos ($tipografiaS, left,20px);
+            margin-right: 3rem;
+        }
+        .contenedorRedes {
+            display: flex;
+            flex-direction: column;
+            a{
+                color: black;
+                font-size: 35px;
+            }
+        }
+    }
+}

@@ -26,21 +26,24 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNav">
-                    <div class="navbar-nav w-100 justify-content-around">
+                    <div class="navbar-nav w-100 justify-content-around textBar">
                         <a class="nav-link" href="./quienes_somos.html">¿Quienes Somos?</a>
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                        <a class="nav-link" href="#seccionProductos">Productos</a>
+                        <a class="nav-link" href="#seccionFormulario">Contactanos</a>
                     </div>
                 </div>
 
             </div>
         </nav>
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight">
-            <iconify-icon icon="material-symbols:shopping-cart"></iconify-icon>
-        </button>
+        <div class="d-flex align-items-center" id="contenedorContadorCarrito">
+            <button class="btn botonCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <iconify-icon icon="material-symbols:shopping-cart"></iconify-icon>
+            </button>
+        </div>
     </header>
     <main>
-        <h1>Atrae más clientes y posiciónate como líder en tu industria</h1>
+        <h1 class="t1">Atrae más clientes y posiciónate como líder en tu industria</h1>
         <section>
             <div class="indexH1">
                 <img src="./imagenes/images2.jpg" alt="ImagenLocal" />
@@ -86,28 +89,28 @@
                 <div>
                     <p class="titulo4">HTML</p>
                     <iframe width="300" height="250" src="https://www.youtube.com/embed/pUjfXhQeSdc"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
                 <div>
                     <p class="titulo4">JavaScript</p>
                     <iframe width="300" height="250" src="https://www.youtube.com/embed/riZbwRFMFuw"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
                 <div>
                     <p class="titulo4">CSS</p>
                     <iframe width="300" height="250" src="https://www.youtube.com/embed/8cSo0ijtkzU"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </section>
         </section>
 
-        <section>
+        <section id="seccionProductos">
             <h2 class="subs"> Productos</h2>
             <div id="contenedorProductos"></div>
         </section>
@@ -123,28 +126,56 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <p>CARRITO VACIO POR AHORA</p>
+                        <table class="w-100">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th class="tituloTabla" scope="col">Producto</th>
+                                    <th class="tituloTabla" scope="col">Cantidad</th>
+                                    <th class="tituloTabla" scope="col">Precio</th>
+                                    <th class="tituloTabla" scope="col">X</th>
+                                </tr>
+                            </thead>
+                            <tbody id="carritoOffcanvas"></tbody>
+                        </table>
+                        <div class="mt-5 d-flex flex-column justify-content-center align-items-center">
+                            <p id="precioTotalCarrito">Precio Total: </p>
+                            <button id="terminarCompra" class="botonComprar">COMPRAR</button>
+                        </div>
                     </div>
                 </div>
             </aside>
         </section>
-        <section>
+        <section id="seccionFormulario">
             <h2 class="titulo5">Dudas o más información</h2>
             <!--------Formulario------->
             <form class="formularioContacto">
-                <input class="inputNombre" type="text" placeholder="Nombre"/>
-                <input class="inputApellido" type="text" placeholder="Apellido"/>
+                <input class="inputNombre" type="text" placeholder="Nombre" />
+                <input class="inputApellido" type="text" placeholder="Apellido" />
                 <input class="inputEdad" type="number" placeholder="Edad">
-                <input class="inputMail" type="email" placeholder="Correo Electrónico"/>
-                <input class="inputPhone" type="number" placeholder="Número de telefono"/>
-                <input class="inputDir" type="adress" placeholder="Dirección"/>
+                <input class="inputMail" type="email" placeholder="Correo Electrónico" />
+                <input class="inputPhone" type="number" placeholder="Número de telefono" />
+                <input class="inputDir" type="adress" placeholder="Dirección" />
                 <textarea class="textArea" name="" id="" cols="30" rows="10"></textarea>
                 <input class="inputSubmit" type="submit" value="Enviar" />
             </form>
         </section>
     </main>
     <footer>
-        <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
+        <div class="d-flex align-items-center">
+            <h3 class="tituloFooter">Buscanos en nuestras redes sociales!</h3>
+            <div class="contenedorRedes">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <iconify-icon icon="uil:instagram-alt"></iconify-icon>
+                </a>
+                <a href="https://es-la.facebook.com/" target="_blank">
+                    <iconify-icon icon="carbon:logo-facebook"></iconify-icon>
+                </a>
+                <a href="https://twitter.com/?lang=es" target="_blank">
+                    <iconify-icon icon="ant-design:twitter-square-filled"></iconify-icon>
+                </a>
+            </div>
+        </div>
         <p>Todos los derechos reservados</p>
     </footer>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>

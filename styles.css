@@ -5,13 +5,80 @@ body {
 }
 
 header {
-  padding: 2.5rem 3rem;
+  padding: 0rem 5rem 0rem 3rem;
+}
+header nav div div a img {
+  width: 13rem;
+  height: 13rem;
+}
+header nav div div .textBar {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33px;
+}
+header div {
+  gap: 3px;
+}
+header div .botonCarrito {
+  font-size: 23px;
+  padding-right: 0;
+}
+header div .contadorCarrito {
+  color: white;
+  margin: 0;
+  background-color: #1C3144;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
 }
 
-main h1 {
+aside div div table thead .tituloTabla {
+  text-align: center;
+}
+aside div div table #carritoOffcanvas .tablaProductos {
+  height: 5rem;
+}
+aside div div table #carritoOffcanvas .tablaProductos td {
+  width: 200px;
+}
+aside div div table #carritoOffcanvas .tablaProductos td img {
+  width: 85%;
+}
+aside div div table #carritoOffcanvas .tablaProductos .infoProducto {
+  font-size: 15px;
+  text-align: center;
+}
+aside div div table #carritoOffcanvas .tablaProductos .eliminarProducto {
+  font-size: 22px;
+  color: #B3061B;
+  height: 10px;
+}
+aside div div table #carritoOffcanvas .tablaProductos .eliminarProducto .deleteIconify {
+  border: 1px solid #B3061B;
+  cursor: pointer;
+}
+aside div .botonComprar {
+  background-color: #1C3144;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  border: none;
+  width: fit-content;
+  color: white;
+}
+aside div .botonComprar:hover {
+  background-color: #d64b3c;
+}
+
+main {
+  background-color: gray;
+}
+main .t1 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-size: 40px;
+  font-style: bold;
 }
 main section .indexH1 {
   font-family: "Open Sans", sans-serif;
@@ -124,7 +191,7 @@ main section .titulo5 {
   font-style: bold;
 }
 main section .formularioContacto {
-  padding: 2rem;
+  padding: 2rem 8rem;
   gap: 30px;
   display: grid;
   grid-template-areas: "nombre apellido edad" "mail telefono direccion" "contacto contacto submit";
@@ -154,6 +221,36 @@ main section .formularioContacto .inputSubmit {
   grid-area: submit;
 }
 
+footer {
+  padding: 2rem 2rem;
+}
+footer div {
+  justify-content: center;
+}
+footer div .tituloFooter {
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  font-size: 20px;
+  margin-right: 3rem;
+}
+footer div .contenedorRedes {
+  display: flex;
+  flex-direction: column;
+}
+footer div .contenedorRedes a {
+  color: black;
+  font-size: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+  header nav div div a img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
 @media only screen and (max-width: 600px) {
   main section .ytb {
     padding: 1rem 2rem;
